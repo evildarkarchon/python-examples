@@ -37,7 +37,7 @@ class MainWindow(QMainWindow):
 
     def start_thread(self):
         self.worker = WorkerThread()
-        self.worker.increment.connect(self.increment_progress)
+        self.worker.increment.connect(self.increment_progress) # type: ignore
         self.worker.start()
 
     def increment_progress(self):
